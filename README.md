@@ -28,14 +28,14 @@ Ideal Workflow:
 
 ```mermaid
 graph TD;
-  user_input-->Agent;
-  Agent-->Product Class;
-  Agent-->Prompt User for Product details;
-  Agent-->Optimise search query with all the details;
-  Agent-->Get Best site;
-  Agent-->Get all site filters;
-  Agent-->Prompt User for which Filters to use;
-  Agent-->Search, Filter & Return products
+  A[User Input] --> B[Agent];
+  B --> C[Product Class];
+  B --> D[Prompt User for Product Details];
+  B --> E[Optimize Search Query with All Details];
+  B --> F[Get Best Site];
+  B --> G[Get All Site Filters];
+  B --> H[Prompt User for Which Filters to Use];
+  B --> I[Search, Filter & Return Products];
 ```
 
 
