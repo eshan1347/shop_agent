@@ -1,0 +1,57 @@
+# Shopping Assistant 
+Experimental LSTM + Multi-Head Attention Model + LLM decoding strategies for Football Commentary Generation 
+Shopping Assistant built using Pydantic AI & Google Gemini LLM. 
+Helps : 
+- Create the optimal search query 
+- Retrieve the available filters for the product on the website 
+- Filter out products based on User's preferences 
+- Recommend the most suitable product as well as the top 10 candidates
+
+## Table of Contents
+- Introduction
+- Setup
+- Workflow
+- Results
+
+## Introduction:
+It is an agentic system built using Pydantic AI & Pydantic for data validation . All data is consistently validated. Google Gemini 2.5 Flash lite is used as the base LLM & flipkart is chosen as the shopping site currently. The agent has access to various tools :  
+            - get_pro_class: Extract the product category & type from the user's query.
+            - prompt_user0: Prompt the user for further details about the product.
+            - rephrase_query : Generate a very concise product search query - combining original query & user provided details
+            - get_best_site: Find the best website to search for the product.
+            - get_site_filters: Retrieve all the available filters on the best site for the product.
+            - prompt_user1: Prompt the user for further details about the product using the available filters
+            - get_candidates : Return the best candidates found for the product 
+& chooses them depending on the workflow , user's demands & its own logic.
+
+Ideal Workflow: 
+
+```mermaid
+graph TD;
+  user_input-->Agent;
+  Agent-->Product Class;
+  Agent-->Prompt User for Product details;
+  Agent-->Optimise search query with all the details;
+  Agent-->Get Best site;
+  Agent-->Get all site filters;
+  Agent-->Prompt User for which Filters to use;
+  Agent-->Search, Filter & Return products
+```
+
+
+## Setup
+To run the project locally: 
+
+1.Install Python dependencies:
+`pip install -r requirements.txt`
+
+2.Clone the repository:
+`git clone https://github.com/eshan1347/shop_agent`
+
+3.Run:
+`python pydantic_ai_agents.py`
+
+## Results
+The model learning can be improved by training for more epochs as well as utilising the entire dataset as well as additional data. Hyperparamter tuning & increasing the number of model parameters may also improve the results. More rigorous & complex decoding strategies like Contrastive decoding may also bring improvements.
+
+This agentic system can be further improved by increasing the number of tools available - so that even more freedom is afforded to the agent. Web scraping data from websites add too much latency to the system - will further explore if any API's are available . Various other sites will be added so that products from various sites can be retrieved & a more holistic recommendation can be returned. 

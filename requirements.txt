@@ -1,0 +1,7 @@
+asyncio
+pydantic
+google-genai
+pydantic-ai
+dotenv
+json
+pytest-playwright
