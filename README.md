@@ -1,6 +1,9 @@
 # Shopping Assistant 
-Experimental LSTM + Multi-Head Attention Model + LLM decoding strategies for Football Commentary Generation 
 Shopping Assistant built using Pydantic AI & Google Gemini LLM. 
+
+## Demo Video
+![Demo Video](shop_agent_demo.mp4)
+
 Helps : 
 - Create the optimal search query 
 - Retrieve the available filters for the product on the website 
@@ -9,6 +12,7 @@ Helps :
 
 ## Table of Contents
 - Introduction
+- Demo Video
 - Setup
 - Workflow
 - Results
