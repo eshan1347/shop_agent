@@ -2,7 +2,8 @@
 Shopping Assistant built using Pydantic AI & Google Gemini LLM. 
 
 ## Demo Video
-![Demo Video](shop_agent_demo.mp4)
+
+https://github.com/user-attachments/assets/8fe905cb-53cb-43da-b051-31c95770552a
 
 Helps : 
 - Create the optimal search query 
