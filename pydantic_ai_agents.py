@@ -287,7 +287,7 @@ class Chatbot:
             if filters:
                 res = ''
                 for filter in filters:
-                    user_prompt = f" describe how {filter} should be used: \nEnter . to skip !"
+                    user_prompt = f" describe how {filter} should be used: \nleave blank to skip !"
                     # res += f'Filter: {filter}, Answer:{input(user_prompt + "Answer: ")}\n'
                     ans = (await self.coach.prompt_user(user_prompt)).strip()
                     if ans and ans != '.':

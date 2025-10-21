@@ -311,8 +311,8 @@ async def playwright_enter() -> Tuple:
     browser = await playwright.chromium.launch(headless=True) #False for browser
     context = await browser.new_context()
     page = await context.new_page()
-    page.set_default_timeout(6000)          # 6 seconds for all waits
-    page.set_default_navigation_timeout(6000)  
+    page.set_default_timeout(15000)          # 6 seconds for all waits
+    page.set_default_navigation_timeout(15000)  
     return context_man, playwright, browser, context, page
 
 async def playwright_exit(context_man) -> None:
