@@ -1,6 +1,6 @@
 import re
 import datetime
-from typing import List, Optional, Annotated, Literal, Dict, Any, Self, Tuple
+from typing import List, Optional, Annotated, Literal, Dict, Any, Tuple
 from enum import Enum
 from pydantic import BaseModel, Field, field_validator, model_validator
 from pydantic_ai import Agent, RunContext
@@ -142,7 +142,7 @@ class ShopDeps(BaseModel):
 
 
     @model_validator(mode='after')
-    def val_query(self: Self) -> Self:
+    def val_query(self):
         if not self.query:
             self.query = self.og_query
         return self

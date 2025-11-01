@@ -1,7 +1,7 @@
 import asyncio
 import pydantic
 from types import NoneType
-from typing import List, Optional, Annotated, Literal, Dict, Any, Self, Tuple
+from typing import List, Optional, Annotated, Literal, Dict, Any, Tuple
 # from google import genai # type: ignore
 from pydantic_ai import Agent, RunContext, UsageLimits
 from site_scraper import get_filters, get_filtered_products, get_products, playwright_enter, playwright_exit
