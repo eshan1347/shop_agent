@@ -308,7 +308,8 @@ async def get_pro_links(base_url: str, page:Any) -> List[str]:
 async def playwright_enter() -> Tuple:
     context_man = async_playwright()
     playwright = await context_man.__aenter__()
-    browser = await playwright.chromium.launch(headless=True) #False for browser
+    browser = await playwright.chromium.launch(headless=True,
+                                              args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]) #False for browser
     context = await browser.new_context()
     page = await context.new_page()
     page.set_default_timeout(15000)          # 6 seconds for all waits
