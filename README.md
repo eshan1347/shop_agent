@@ -51,7 +51,7 @@ To run the project locally:
 2. Install Python dependencies:
 `pip install -r requirements.txt`
 3. Run:
-`python pydantic_ai_agents.py`
+`python app_gui.py`
 
 ## Results
 
