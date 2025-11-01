@@ -46,14 +46,11 @@ graph TD;
 
 ## Setup
 To run the project locally: 
-
-1.Install Python dependencies:
-`pip install -r requirements.txt`
-
-2.Clone the repository:
+1. Clone the repository:
 `git clone https://github.com/eshan1347/shop_agent`
-
-3.Run:
+2. Install Python dependencies:
+`pip install -r requirements.txt`
+3. Run:
 `python pydantic_ai_agents.py`
 
 ## Results
