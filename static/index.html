@@ -402,7 +402,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        const ws = new WebSocket(`ws://${window.location.host}/ws/chat`);
+        
+        const ws = new WebSocket(window.location.origin.replace(/^http/, 'ws') + '/ws/chat');
+        //const ws = new WebSocket(`ws://${window.location.host}/ws/chat`);
+        // Replace the old ws://... line with this:
         const messagesContainer = document.getElementById('messagesContainer');
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
