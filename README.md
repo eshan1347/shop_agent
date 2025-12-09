@@ -1,5 +1,6 @@
 # Shopping Assistant 
 Shopping Assistant built using Pydantic AI & Google Gemini LLM. 
+[Deployed on Huggingface](https://huggingface.co/spaces/eshan13/shop-agent)
 
 ## Demo Video
 
